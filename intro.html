@@ -1,0 +1,429 @@
+
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MD2K Software Platform Overview &#8212; Software</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" integrity="sha384-KA6wR/X5RY4zFAHpv/CnoG2UW1uogYfdnP67Uv7eULvTveboZJg0qUpmJZb5VqzN" crossorigin="anonymous">
+    <link href="_static/css/index.css" rel="stylesheet">
+    <link rel="stylesheet" href="_static/sphinx-book-theme.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-dropdown.css" />
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/sphinx-book-theme.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/language_data.js"></script>
+    <script src="_static/togglebutton.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script src="_static/sphinx-book-theme.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="mCerebrum" href="software/mcerebrum/index.html" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="docsearch:language" content="en">
+
+
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+<a class="navbar-brand text-wrap" href="index.html">
+  
+  <img src="_static/MD2K-Logo_80px.png" class="logo" alt="logo">
+  
+  
+  <h1 class="site-logo" id="site-title">Software</h1>
+  
+</a>
+</div>
+
+<form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form>
+
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+  <ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="#">
+   MD2K Software Platform Overview
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Getting started
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="software/mcerebrum/index.html">
+   mCerebrum
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Software
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="software/overview.html">
+   Software Platform Overview
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="software/cerebralcortex/index.html">
+   Cerebral Cortex
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="software/mcerebrum/index.html">
+   mCerebrum
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="software/mprov/index.html">
+   mProv
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="software/mflow/index.html">
+   mFlow
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="software/mpolicy_privlib/index.html">
+   mPolicy and privLib
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="software/physiogan/index.html">
+   PhysioGAN
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="software/nist_synthetic_data_challenge/index.html">
+   NIST Synthetic Data Challenge
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Studies
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="studies/overview.html">
+   Overview
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="studies/moods.html">
+   Mobile Open Observaion of Stressors
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="studies/md2k_smoking_and_eating_cessation.html">
+   MD2K Smoking and Eating Cessation
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="studies/md2k_congestion_heart_failure.html">
+   Congestive Heart Failure
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="studies/mperf_workplace_performance.html">
+   Workplace Performance
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="studies/ses.html">
+   Socio Economic Status Smoking Cessation
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="studies/aa.html">
+   African America Smoking Cessation
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="studies/vermont_smoking_cessation.html">
+   Smoking Cessation and fMRI
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="studies/moffitt_smoking_cessation.html">
+   Moffitt Smoking Cessation
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="studies/robas.html">
+   Remote Oral Behaviors Assessment System
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="studies/cocaine.html">
+   Cocaine Use
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="studies/pain_management.html">
+   Pain Management
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="studies/behavior_change.html">
+   Behavior Change
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="studies/break_free.html">
+   Affective Science
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="studies/mars.html">
+   Mobile Assistance for Regulate Smoking
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Resources
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="contributing.html">
+   Contributing
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="license.html">
+   Software License: BSD 2-Clause
+  </a>
+ </li>
+</ul>
+
+</nav>
+
+ <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="row topbar fixed-top container-xl">
+    <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show">
+    </div>
+    <div class="col pl-2 topbar-main">
+        
+        <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+            data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+            aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+            title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+            <i class="fas fa-bars"></i>
+            <i class="fas fa-arrow-left"></i>
+            <i class="fas fa-arrow-up"></i>
+        </button>
+        
+        <div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="_sources/intro.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+    
+</div>
+        <!-- Source interaction buttons -->
+
+
+        <!-- Full screen (wrap in <a> to have style consistency -->
+        <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+                data-placement="bottom" onclick="toggleFullScreen()" title="Fullscreen mode"><i
+                    class="fas fa-expand"></i></button></a>
+
+        <!-- Launch buttons -->
+
+    </div>
+
+    <!-- Table of contents -->
+    <div class="d-none d-md-block col-md-2 bd-toc show">
+        <div class="tocsection onthispage pt-5 pb-3">
+            <i class="fas fa-list"></i> Contents
+        </div>
+        <nav id="bd-toc-nav">
+            <ul class="nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#overview">
+   Overview
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#use-cases">
+   Use Cases
+  </a>
+  <ul class="nav section-nav flex-column">
+  </ul>
+ </li>
+</ul>
+
+        </nav>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="md2k-software-platform-overview">
+<h1>MD2K Software Platform Overview<a class="headerlink" href="#md2k-software-platform-overview" title="Permalink to this headline">¶</a></h1>
+<iframe width="800" height="450" src="https://www.youtube.com/embed/uSQn2puExxM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<hr class="docutils" />
+<div class="section" id="overview">
+<h2>Overview<a class="headerlink" href="#overview" title="Permalink to this headline">¶</a></h2>
+<p><strong>High-Rate Sensing</strong></p>
+<a class="reference internal image-reference" href="_images/heartbeat.svg"><img alt="check" height="100px" src="_images/heartbeat.svg" /></a>
+<p>mCerebrum is a mobile phone software platform that can be used to collect both high-rate raw sensor data and associated labels in the field.</p>
+<p><strong>Multi-Sensor Field Studies</strong></p>
+<a class="reference internal image-reference" href="_images/user-circle.svg"><img alt="check" height="100px" src="_images/user-circle.svg" /></a>
+<p>mCerebrum supports seamless sharing of streaming data from multiple sensors to enable computation of multi-sensor biomarkers (e.g., sress, smoking, eating), which can be remotely monitored through Cerebral Cortex.</p>
+<p><strong>Real-Time Data Quality Monitoring</strong></p>
+<a class="reference internal image-reference" href="_images/clock.svg"><img alt="check" height="100px" src="_images/clock.svg" /></a>
+<p>mCerebrum supports real-time assessment of data quality to ensure data fidelity which is couple with Cerebral Cortex real-time montoring capabilities.</p>
+<p><strong>Marker Development and Validation</strong></p>
+<a class="reference internal image-reference" href="_images/chart-bar.svg"><img alt="check" height="100px" src="_images/chart-bar.svg" /></a>
+<p>Cerebral Cortex supports population-scale data analysis and visualzation to enable marker development and validation.</p>
+<p><strong>To Monitor Health Wellness and Work Performance</strong></p>
+<a class="reference internal image-reference" href="_images/user-md.svg"><img alt="check" height="100px" src="_images/user-md.svg" /></a>
+<p>mCerebrum aims to unleash a new wave of innovative research in the assessment and improvement of everyday job performance.</p>
+<p><strong>Real-Time Biomarker Computation</strong></p>
+<a class="reference internal image-reference" href="_images/cogs.svg"><img alt="check" height="100px" src="_images/cogs.svg" /></a>
+<p>mCerebrum is architecturally scalable to support concurrent computation of a large number of biomarkers (each of which requires complex processing) without saturating the computational capacity or battery life of a mobile phone.</p>
+<p><strong>Sensor-Triggered Mobile Interventions</strong></p>
+<a class="reference internal image-reference" href="_images/mobile-alt.svg"><img alt="check" height="100px" src="_images/mobile-alt.svg" /></a>
+<p>mCerebrum supports the sense-analyze-act paradigm to aid the development and evaluation of sensor-triggered interventions</p>
+<p><strong>Mobile Sensor Big-Data</strong></p>
+<a class="reference internal image-reference" href="_images/database.svg"><img alt="check" height="100px" src="_images/database.svg" /></a>
+<p>mCerebrum allows for high-frequency raw sensor data collection (800+ Hz for 70+ million samples/day), processing, and storage (~2GB/day) and is coupled with Cerebral Cortex which scales to 1,000s of concurrent mCerebrum instances and 100s of terabytes of data.</p>
+</div>
+<div class="section" id="use-cases">
+<h2>Use Cases<a class="headerlink" href="#use-cases" title="Permalink to this headline">¶</a></h2>
+<img alt="MD2K Use Case" src="_images/use_case.png" />
+<p>There are three core users of mCerebrum and Cerebral Cortex. (1) The user wearing sensors and interacting with mCerebrum which uploads data to Cerebral Cortex, (2) the health science researcher that conduct studies, visualize field data, run population-scale analysis, and (3) the data science researcher that constructs models through machine learning, runs interactive analysis through web-based dashboards, and builds scalable data analytics across large populations.</p>
+<div class="toctree-wrapper compound">
+</div>
+<div class="toctree-wrapper compound">
+</div>
+<div class="toctree-wrapper compound">
+</div>
+<div class="toctree-wrapper compound">
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        </div>
+    </div>
+    
+    
+    <div class='prev-next-bottom'>
+        
+    <a class='right-next' id="next-link" href="software/mcerebrum/index.html" title="next page">mCerebrum</a>
+
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By MD2K Center of Excellence<br/>
+        
+            &copy; Copyright 2020.<br/>
+          <div class="extra_footer">
+            MD2K is supported by the National Institutes of Health Big Data to Knowledge Initiative (Grant #1U54EB020404)<br>Team: Cornell Tech, GA Tech, Harvard, U. Memphis, Northwestern, Ohio State, UCLA, UCSD, UCSF, UMass, U. Michigan, U. Utah, WVU 
+          </div>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+
+    <script src="_static/js/index.js"></script>
+    
+  </body>
+</html>
