@@ -6,8 +6,22 @@
     # sections:
     #   - file: mCerebrum/index
 
+- part: Tutorials
+  chapters:
+    - file: tutorials/principled_approach_computational_modeling
+      title: MD2K's Principled Approach
+      sections:
+        - file: tutorials/principled_approach_computational_modeling/introduction
+        - file: tutorials/principled_approach_computational_modeling/principled_approach_with_examples
+        - file: tutorials/principled_approach_computational_modeling/data_and_visualization
+        - file: tutorials/principled_approach_computational_modeling/computational_pipeline
+        - file: tutorials/principled_approach_computational_modeling/model_training
+        - file: tutorials/principled_approach_computational_modeling/validation_approaches
+        - file: tutorials/principled_approach_computational_modeling/data_access_irbs_privacy
+        - file: tutorials/principled_approach_computational_modeling/team_project
+        - file: tutorials/principled_approach_computational_modeling/conclusion_q_a
 
-- part: Software
+- part: Software Documentation
   chapters:
     - file: software/overview
     - file: software/cerebralcortex/index
