@@ -63,6 +63,10 @@
       - file: studies/individual_studies/break_free
       - file: studies/individual_studies/mars
 
+- part: Data
+  chapters:
+    - file: data/index
+
 - part: Resources
   chapters:
     - file: contributing
