@@ -1,4 +1,4 @@
 Overview
 ===============
 
-Summarize the studies here
+Summarize how studies leverage the software and what has come from them.

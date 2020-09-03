@@ -37,20 +37,23 @@
 - part: Studies
   chapters:
     - file: studies/overview
-    - file: studies/moods
-    - file: studies/md2k_smoking_and_eating_cessation
-    - file: studies/md2k_congestion_heart_failure
-    - file: studies/mperf_workplace_performance
-    - file: studies/ses
-    - file: studies/aa
-    - file: studies/vermont_smoking_cessation
-    - file: studies/moffitt_smoking_cessation
-    - file: studies/robas
-    - file: studies/cocaine
-    - file: studies/pain_management
-    - file: studies/behavior_change
-    - file: studies/break_free
-    - file: studies/mars
+
+    - file: studies/individual_studies
+      sections:
+      - file: studies/individual_studies/moods
+      - file: studies/individual_studies/md2k_smoking_and_eating_cessation
+      - file: studies/individual_studies/md2k_congestion_heart_failure
+      - file: studies/individual_studies/mperf_workplace_performance
+      - file: studies/individual_studies/ses
+      - file: studies/individual_studies/aa
+      - file: studies/individual_studies/vermont_smoking_cessation
+      - file: studies/individual_studies/moffitt_smoking_cessation
+      - file: studies/individual_studies/robas
+      - file: studies/individual_studies/cocaine
+      - file: studies/individual_studies/pain_management
+      - file: studies/individual_studies/behavior_change
+      - file: studies/individual_studies/break_free
+      - file: studies/individual_studies/mars
 
 - part: Resources
   chapters:
