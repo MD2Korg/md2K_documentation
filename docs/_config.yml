@@ -5,10 +5,10 @@
 
 #######################################################################################
 # Book settings
-title                       : Software  # The title of the book. Will be placed in the left navbar.
+title                       : ""  # The title of the book. Will be placed in the left navbar.
 author                      : MD2K Center of Excellence  # The author of the book
 # copyright                   : "2020"  # Copyright year to be placed in the footer
-logo                        : img/MD2K-Logo_80px.png  # A path to the book logo
+logo                        : img/MD2K-software.png  # A path to the book logo
 exclude_patterns            : []  # Patterns to skip when building the book. Can be glob-style (e.g. "*skip.ipynb")
 
 #######################################################################################
@@ -23,7 +23,7 @@ execute:
 html:
   favicon                   : ""  # A path to a favicon image
   use_edit_page_button      : false  # Whether to add an "edit this page" button to pages. If `true`, repository information in repository: must be filled in
-  use_repository_button     : false  # Whether to add a link to your repository button
+  use_repository_button     : true  # Whether to add a link to your repository button
   use_issues_button         : false  # Whether to add an "open an issue" button
   extra_navbar              : Powered by <a href="https://jupyterbook.org">Jupyter Book</a>  # Will be displayed underneath the left navbar.
   extra_footer              : "MD2K is supported by the National Institutes of Health Big Data to Knowledge Initiative (Grant #1U54EB020404)<br>Team: Cornell Tech, GA Tech, Harvard, U. Memphis, Northwestern, Ohio State, UCLA, UCSD, UCSF, UMass, U. Michigan, U. Utah, WVU "  # Will be displayed underneath the footer.
@@ -43,7 +43,7 @@ launch_buttons:
   thebe                     : false  # Add a thebe button to pages (requires the repository to run on Binder)
 
 repository:
-  url                       : https://github.com/MD2Korg/CerebralCortex-Docs  # The URL to your book's repository
+  url                       : https://github.com/MD2Korg/md2k_documentation  # The URL to your book's repository
   path_to_book              : "docs"  # A path to your book's folder, relative to the repository root.
   branch                    : master  # Which branch of the repository should be used when creating links
 
@@ -53,8 +53,6 @@ sphinx:
   extra_extensions          :  # A list of extra extensions to load by Sphinx.
   config                    :   # key-value pairs to directly over-ride the Sphinx configuration
 
-parse:
-  myst_extended_syntax: true
 
 latex:
   latex_documents:
