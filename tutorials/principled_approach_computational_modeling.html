@@ -1,0 +1,721 @@
+
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>A Principled Approach to Computational Modeling of Health, Daily Behaviors, and Momentary Contexts from High-Frequency Sensor Data</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" integrity="sha384-KA6wR/X5RY4zFAHpv/CnoG2UW1uogYfdnP67Uv7eULvTveboZJg0qUpmJZb5VqzN" crossorigin="anonymous">
+    <link href="../_static/css/index.css" rel="stylesheet">
+    <link rel="stylesheet" href="../_static/sphinx-book-theme.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-dropdown.css" />
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/sphinx-book-theme.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/language_data.js"></script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/sphinx-book-theme.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Introduction" href="principled_approach_computational_modeling/introduction.html" />
+    <link rel="prev" title="mCerebrum" href="../software/mcerebrum/index.html" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="docsearch:language" content="en">
+
+
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+<a class="navbar-brand text-wrap" href="../index.html">
+  
+  <img src="../_static/MD2K-software.png" class="logo" alt="logo">
+  
+  
+</a>
+</div>
+
+<form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form>
+
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+  <ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../intro.html">
+   MD2K Software Platform Overview
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Getting started
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../software/mcerebrum/index.html">
+   mCerebrum
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Tutorials
+ </span>
+</p>
+<ul class="current nav sidenav_l1">
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   MD2K's Principled Approach
+  </a>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="principled_approach_computational_modeling/introduction.html">
+     Introduction
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="principled_approach_computational_modeling/principled_approach_with_examples.html">
+     Principled Approach with Examples
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="principled_approach_computational_modeling/data_and_visualization.html">
+     Data and Visualization
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="principled_approach_computational_modeling/computational_pipeline.html">
+     Computational Pipeline
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="principled_approach_computational_modeling/model_training.html">
+     Model Training
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="principled_approach_computational_modeling/validation_approaches.html">
+     Validation Approaches
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="principled_approach_computational_modeling/data_access_irbs_privacy.html">
+     Data Access, IRBs, Participant Privacy
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="principled_approach_computational_modeling/team_project.html">
+     Team Project: Developing New Features and Inferences
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="principled_approach_computational_modeling/conclusion_q_a.html">
+     Conclusion, Q&amp;A, and Wrap-Up
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Software Documentation
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../software/overview.html">
+   Software Platform Overview
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../software/cerebralcortex/index.html">
+   Cerebral Cortex
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../software/mcerebrum/index.html">
+   mCerebrum
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../software/mprov/index.html">
+   mProv
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../software/mflow/index.html">
+   mFlow
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../software/mpolicy_privlib/index.html">
+   mPolicy and privLib
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../software/physiogan/index.html">
+   PhysioGAN
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../software/nist_synthetic_data_challenge/index.html">
+   NIST Synthetic Data Challenge
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Studies
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../studies/overview.html">
+   Overview
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../studies/moods.html">
+   Mobile Open Observaion of Stressors
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../studies/md2k_smoking_and_eating_cessation.html">
+   MD2K Smoking and Eating Cessation
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../studies/md2k_congestion_heart_failure.html">
+   Congestive Heart Failure
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../studies/mperf_workplace_performance.html">
+   Workplace Performance
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../studies/ses.html">
+   Socio Economic Status Smoking Cessation
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../studies/aa.html">
+   African America Smoking Cessation
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../studies/vermont_smoking_cessation.html">
+   Smoking Cessation and fMRI
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../studies/moffitt_smoking_cessation.html">
+   Moffitt Smoking Cessation
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../studies/robas.html">
+   Remote Oral Behaviors Assessment System
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../studies/cocaine.html">
+   Cocaine Use
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../studies/pain_management.html">
+   Pain Management
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../studies/behavior_change.html">
+   Behavior Change
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../studies/break_free.html">
+   Affective Science
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../studies/mars.html">
+   Mobile Assistance for Regulate Smoking
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Resources
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../contributing.html">
+   Contributing
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../license.html">
+   Software License: BSD 2-Clause
+  </a>
+ </li>
+</ul>
+
+</nav>
+
+ <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="row topbar fixed-top container-xl">
+    <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show">
+    </div>
+    <div class="col pl-2 topbar-main">
+        
+        <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+            data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+            aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+            title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+            <i class="fas fa-bars"></i>
+            <i class="fas fa-arrow-left"></i>
+            <i class="fas fa-arrow-up"></i>
+        </button>
+        
+        <div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/tutorials/principled_approach_computational_modeling.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+    
+</div>
+        <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/MD2Korg/md2k_documentation"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        
+        
+    </div>
+</div>
+
+
+        <!-- Full screen (wrap in <a> to have style consistency -->
+        <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+                data-placement="bottom" onclick="toggleFullScreen()" title="Fullscreen mode"><i
+                    class="fas fa-expand"></i></button></a>
+
+        <!-- Launch buttons -->
+
+    </div>
+
+    <!-- Table of contents -->
+    <div class="d-none d-md-block col-md-2 bd-toc show">
+        <div class="tocsection onthispage pt-5 pb-3">
+            <i class="fas fa-list"></i> Contents
+        </div>
+        <nav id="bd-toc-nav">
+            <ul class="nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#context">
+   Context
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#target-audience">
+   Target Audience
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#tutorial-preparations">
+   Tutorial Preparations
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#tutorial-schedule">
+   Tutorial Schedule
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#tutorial-sessions">
+   Tutorial Sessions
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#principled-approach-with-examples-santosh-kumar">
+     Principled Approach with Examples (Santosh Kumar)
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#data-and-visualization-nasir-ali">
+     Data and Visualization (Nasir Ali)
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#computational-pipeline-tim-hnat">
+     Computational Pipeline (Tim Hnat)
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#model-training-anandatirtha-nandugudi">
+     Model Training (Anandatirtha Nandugudi)
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#validation-approaches-tim-hnat">
+     Validation Approaches (Tim Hnat)
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#data-access-irbs-participant-privacy-shahin-samiei-and-santosh-kumar">
+     Data Access, IRBs, Participant Privacy (Shahin Samiei and Santosh Kumar)
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#team-project-developing-new-features-and-inferences-tim-hnat-and-nasir-ali">
+     Team Project: Developing New Features and Inferences (Tim Hnat and Nasir Ali)
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#conclusion-q-a-and-wrap-up-santosh-kumar-and-tim-hnat">
+     Conclusion, Q&amp;A, and Wrap-Up (Santosh Kumar and Tim Hnat)
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#speakers">
+   Speakers
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#santosh-kumar">
+     Santosh Kumar
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#tim-hnat">
+     Tim Hnat
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#nasir-ali">
+     Nasir Ali
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#anandatirtha-nandugudi">
+     Anandatirtha Nandugudi
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#shahin-samiei">
+     Shahin Samiei
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+        </nav>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="a-principled-approach-to-computational-modeling-of-health-daily-behaviors-and-momentary-contexts-from-high-frequency-sensor-data">
+<h1>A Principled Approach to Computational Modeling of Health, Daily Behaviors, and Momentary Contexts from High-Frequency Sensor Data<a class="headerlink" href="#a-principled-approach-to-computational-modeling-of-health-daily-behaviors-and-momentary-contexts-from-high-frequency-sensor-data" title="Permalink to this headline">¶</a></h1>
+<img alt="../_images/cloudVisual.png" src="../_images/cloudVisual.png" />
+<p>This tutorial will introduce students, researchers, and professionals to the end-to-end process for converting high-frequency wearable sensor data into validated features and inferences.  This tutorial will begin with a principled approach to doing science before moving into data exploration.  Computational and data processing challenges will discussed next along with approaches to handling each.  The afternoon sessions will explore computational modeling and validation of approaches for inferring health, daily behaviors, and momentary contexts.  The tutorial will conclude with a discussion of the importance of responsible data access, IRBs, and participant privacy.  A hands-on component will complement each session and allow the attendee to apply the presented knowledge to a real-world data set.</p>
+<div class="section" id="context">
+<h2>Context<a class="headerlink" href="#context" title="Permalink to this headline">¶</a></h2>
+<p>Over the past decade, we have collected and analyzed 100+ terabytes of high-frequency wearable sensor data from lab and field studies at various research institutions across the United States. Through close collaboration of health researchers, we have developed computational models to detect  stress, smoking, craving, cocaine use, conversation, brushing, and flossing from physiological and inertial sensors. These models have been published and cited widely in top-tier computing venues (e.g., IPSN, SenSys, UbiComp, CHI, ICML) and health journals. These works have involved 50+ students, postdocs, and faculty from 20 universities and have been supported by the National Institutes of Health (NIH), National Science Foundation (NSF), and other federal agencies via $45+ million in research grants.</p>
+<p>Cerebral CortexThese experiences have enabled us to articulate a research vision (in IEEE Computer’13 and ’16) and a principled approach in a graduate-level textbook (Mobile Health by Springer ‘17). Since 2014, via support from both NIH and NSF, including our NIH BD2K Center of Excellence for Mobile Sensor Data-to-Knowledge (MD2K), we have developed an open-source big data software platform for the research community to accelerate their task of collecting, analyzing, and sharing high-frequency, raw sensor data and associated labels (e.g., from self-reports or videos). The platform supports the development and validation of computational models and algorithms for inferring markers of daily behaviors and other risk factors in health and wellness such as momentary contexts. It has supported or currently supports research studies at 15 sites across the United States, investigating smoking, overeating, stress, congestive heart failure, oral health, cocaine use, opioid use, chronic pain, behavior change, and workplace performance.</p>
+<p>The software platform consists of a platform for smartphones, mCerebrum [SenSys’17], consisting of 25+ apps that enables the collection of large volumes of data from wearables and smartphones (exceeding 1,000 samples per second or 4 gigabytes per day) and a cloud platform, Cerebral Cortex [AMIA’17] which can receive data remotely from thousands of mCerebrum or IoT instances deployed in the field and provide real-time remote monitoring of data collection status for each participant. For researchers, Cerebral Cortex supports scalable big data machine learning model development and custom visualization across population-scale data.</p>
+<p>Metadata annotation of the collected sensor data makes them easily usable by third-party researchers. By integrating industry-standard open-source platforms (e.g. Apache Spark, Jupyter Notebooks) the entire software platform is easily usable, deployable, and extensible by other independent researchers.</p>
+<p><strong>Goal:</strong> This tutorial aims to share the knowledge we have acquired in our computational modeling of health and personal daily behaviors and momentary contexts from high-frequency raw sensor data and provide hands-on experiences with open-source software platforms and libraries. To engage attendees, this tutorial will feature a combination of lectures and demos, presented by the speakers, and participants working with real-world datasets.  Attendees will be provided slides, relevant research papers, and a virtual machine containing all the necessary software and datasets before the tutorial session.</p>
+<p><strong>Prior Experience:</strong> This tutorial builds and expands on talks and keynote speeches at computing and health conferences, universities, industry, and governments, as well as on tutorials (with hands-on experiments) at the annual meeting of the MD2K Center and the mHealth Training Institute at UCLA.</p>
+</div>
+<div class="section" id="target-audience">
+<h2>Target Audience<a class="headerlink" href="#target-audience" title="Permalink to this headline">¶</a></h2>
+<p>This tutorial will benefit CPS and IoT students and faculty by describing interesting new research directions and presenting systematic approaches to mining large sensor datasets for computational modeling of human behaviors and contexts. By using an open-source mobile sensor big data platform for hands-on experiments, this tutorial will also serve faculty and researchers seeking to gain a better understanding of mobile sensor big data research and professionals looking for approaches to handle ever-growing data challenges and demands of high-frequency sensors. At the conclusion, attendees will become familiar with a principled approach for computational modeling of daily behaviors and momentary contexts, be aware of the potential hurdles in conducting research with this type of data, and have hands-on experience working with this data via an open-source mobile sensor big data software.</p>
+</div>
+<div class="section" id="tutorial-preparations">
+<h2>Tutorial Preparations<a class="headerlink" href="#tutorial-preparations" title="Permalink to this headline">¶</a></h2>
+<p>We will post a link to a VirtualBox virtual machine on this site by March 21, 2020.  This virtual machine will contain all of the software and data utilized for this tutorial session and the interactive components will leverage this virtual machine configuration.  Slides for each session will also be made available on this site prior to the tutorial day.</p>
+</div>
+<div class="section" id="tutorial-schedule">
+<h2>Tutorial Schedule<a class="headerlink" href="#tutorial-schedule" title="Permalink to this headline">¶</a></h2>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Time</p></th>
+<th class="head"><p>Session</p></th>
+<th class="head"><p>Presenter(s)</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>8:30 - 9:00</p></td>
+<td><p>Welcome and Overview</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p>9:00 - 10:00</p></td>
+<td><p>Principled Approach with Examples</p></td>
+<td><p>Santosh Kumar</p></td>
+</tr>
+<tr class="row-even"><td><p>10:00 - 10:30</p></td>
+<td><p>Break and Networking</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p>10:30 - 11:00</p></td>
+<td><p>Data and Visualization</p></td>
+<td><p>Nasir Ali</p></td>
+</tr>
+<tr class="row-even"><td><p>11:00 - 12:00</p></td>
+<td><p>Computational Pipeline</p></td>
+<td><p>Tim Hnat</p></td>
+</tr>
+<tr class="row-odd"><td><p>12:00 - 13:30</p></td>
+<td><p>Lunch</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p>13:30 - 14:30</p></td>
+<td><p>Model Training</p></td>
+<td><p>Anandatirtha Nandugudi</p></td>
+</tr>
+<tr class="row-odd"><td><p>14:30 - 15:00</p></td>
+<td><p>Validation Approaches</p></td>
+<td><p>Tim Hnat</p></td>
+</tr>
+<tr class="row-even"><td><p>15:00 - 15:30</p></td>
+<td><p>Break and Networking</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p>15:30 - 16:00</p></td>
+<td><p>Data Access, IRBs, Participant Privacy</p></td>
+<td><p>Shahin Samiei and Santosh Kumar</p></td>
+</tr>
+<tr class="row-even"><td><p>16:00 - 17:00</p></td>
+<td><p>Team Project: Developing New Features and Inferences</p></td>
+<td><p>Tim Hnat and Nasir Ali</p></td>
+</tr>
+<tr class="row-odd"><td><p>17:00 - 17:30</p></td>
+<td><p>Conclusion, Q&amp;A, and Wrap-Up</p></td>
+<td><p>Santosh Kumar and Tim Hnat</p></td>
+</tr>
+<tr class="row-even"><td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="tutorial-sessions">
+<h2>Tutorial Sessions<a class="headerlink" href="#tutorial-sessions" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="principled-approach-with-examples-santosh-kumar">
+<h3>Principled Approach with Examples (Santosh Kumar)<a class="headerlink" href="#principled-approach-with-examples-santosh-kumar" title="Permalink to this headline">¶</a></h3>
+<p>This tutorial is designed to help students, researchers, and professionals to introduce rigor in their approach in handling the data diversity and noise that comes from high-frequency sensor data, especially when using them to reliably infer behavioral and momentary contexts. We believe that these techniques will help attendees improve the accuracy and real-world utility of their sensor-derived models.  This tutorial will start with the presentation of a principled approach to doing science and will be followed by the topics below.</p>
+</div>
+<div class="section" id="data-and-visualization-nasir-ali">
+<h3>Data and Visualization (Nasir Ali)<a class="headerlink" href="#data-and-visualization-nasir-ali" title="Permalink to this headline">¶</a></h3>
+<p>This topic focuses on organizing, curating, and storing high-frequency data sets so they are easily and efficiently usable for modeling.  An open dataset, mOral, will be utilized to provide real-world context to the data exploration discussions and hands-on coding tutorial.</p>
+</div>
+<div class="section" id="computational-pipeline-tim-hnat">
+<h3>Computational Pipeline (Tim Hnat)<a class="headerlink" href="#computational-pipeline-tim-hnat" title="Permalink to this headline">¶</a></h3>
+<p>Transforming data from one form to another (e.g., detecting hand to mouth gestures from wrist-worn inertial sensors) is a critical preprocessing stage before getting to the modeling and validation steps. There are many nuances (e.g. windowing, data cleaning, filtering) associated with performing these data transformations which will be discussed in the context of published works and grounded with real data examples.  We will show the benefits of these transformations by writing custom feature transformations on the mOral dataset.</p>
+</div>
+<div class="section" id="model-training-anandatirtha-nandugudi">
+<h3>Model Training (Anandatirtha Nandugudi)<a class="headerlink" href="#model-training-anandatirtha-nandugudi" title="Permalink to this headline">¶</a></h3>
+<p>This section is dedicated to the techniques needed to cleanly build, test, and adapt models on large-scale sensor data.  We will discuss various considerations including state estimation and event detection, data processing pipelines, interpretability or explainability, generalizability, personalization without new training, and computational efficiency for real-time operation.  We will ground this discussion in available open-source tools and use an example from the mOral open dataset. We will show the benefits of these techniques through the impact and quality of the generated results.</p>
+</div>
+<div class="section" id="validation-approaches-tim-hnat">
+<h3>Validation Approaches (Tim Hnat)<a class="headerlink" href="#validation-approaches-tim-hnat" title="Permalink to this headline">¶</a></h3>
+<p>The discussion on validation will emphasize to the attendees the importance and impact of carefully considering how the models are validated for both detection accuracy and temporal accuracy.  We will discuss the importance of cross-subject validation, train/test splits, independence of data sets, and the selection of gold standards. Additionally, a discussion on accuracy reporting, including false-positive analysis, recall analysis, temporal accuracy for event start/end times, and confidence levels will expose the attendees to key differences between this type of data and traditional interpretations.  As with the other sections, examples will be demonstrated in the context of available open-source tools and a running example.</p>
+</div>
+<div class="section" id="data-access-irbs-participant-privacy-shahin-samiei-and-santosh-kumar">
+<h3>Data Access, IRBs, Participant Privacy (Shahin Samiei and Santosh Kumar)<a class="headerlink" href="#data-access-irbs-participant-privacy-shahin-samiei-and-santosh-kumar" title="Permalink to this headline">¶</a></h3>
+<p>This discussion will highlight the importance of addressing data access concerns throughout the study and data collection processes.  We will discuss the key components of an Institutional Review Board (IRB) protocol and the responsibilities of the researchers involved.  Finally, this session will discuss participant privacy issues in the collection and analysis of high-frequency sensor data and current approaches to mitigating them.</p>
+</div>
+<div class="section" id="team-project-developing-new-features-and-inferences-tim-hnat-and-nasir-ali">
+<h3>Team Project: Developing New Features and Inferences (Tim Hnat and Nasir Ali)<a class="headerlink" href="#team-project-developing-new-features-and-inferences-tim-hnat-and-nasir-ali" title="Permalink to this headline">¶</a></h3>
+<p>The tutorial attendees will be organized in small teams to develop new features or inferences using the knowledge gains from the day’s session using the open mOral dataset and storing them with appropriate metadata so they can be easily used by other researchers.</p>
+</div>
+<div class="section" id="conclusion-q-a-and-wrap-up-santosh-kumar-and-tim-hnat">
+<h3>Conclusion, Q&amp;A, and Wrap-Up (Santosh Kumar and Tim Hnat)<a class="headerlink" href="#conclusion-q-a-and-wrap-up-santosh-kumar-and-tim-hnat" title="Permalink to this headline">¶</a></h3>
+<p>We will discuss the challenges, opportunities, and open problems in the computational modeling of daily behaviors and momentary contexts. It will also provide opportunities for open discussions among the attendees including possible next steps.</p>
+</div>
+</div>
+<div class="section" id="speakers">
+<h2>Speakers<a class="headerlink" href="#speakers" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="santosh-kumar">
+<h3>Santosh Kumar<a class="headerlink" href="#santosh-kumar" title="Permalink to this headline">¶</a></h3>
+<a class="reference internal image-reference" href="../_images/Kumar.png"><img alt="../_images/Kumar.png" src="../_images/Kumar.png" style="width: 200px; height: 200px;" /></a>
+<div class="admonition-about admonition">
+<p class="admonition-title">About</p>
+<p>Director, MD2K Center of Excellence</p>
+<p>Professor &amp; Lillian and Morrie Moss Chair of Excellence</p>
+<p>Department of Computer Science, University of Memphis</p>
+</div>
+<p>Santosh Kumar is the Lillian and Morrie Moss Chair of Excellence Professor in the Department of Computer Science at the University of Memphis. Santosh has been leading large multidisciplinary mobile health (mHealth) projects since 2007, sponsored by NSF and NIH. He is currently leading an NIH Center of Excellence on Mobile Sensor Data-to-Knowledge (MD2K), a truly transdisciplinary project in which Santosh leads a team of 20+ investigators from 12 universities who come from diverse but complementary disciplines including computer science, engineering, statistics, public health, medicine, and behavioral science. His work has led to the development of novel sensor-derived mHealth biomarkers such as stress, conversation, smoking, craving, cocaine use, brushing, and flossing. In addition to direct experience with leading transdisciplinary mobile sensor research projects, Santosh has led national efforts to advance the field of mHealth. He has chaired national meetings on mHealth Evidence and on identifying computing grand challenges in mHealth.</p>
+</div>
+<div class="section" id="tim-hnat">
+<h3>Tim Hnat<a class="headerlink" href="#tim-hnat" title="Permalink to this headline">¶</a></h3>
+<a class="reference internal image-reference" href="../_images/Hnat.png"><img alt="../_images/Hnat.png" src="../_images/Hnat.png" style="width: 200px; height: 200px;" /></a>
+<div class="admonition-about admonition">
+<p class="admonition-title">About</p>
+<p>Chief Software Architect, MD2K Center of Excellence</p>
+<p>University of Memphis</p>
+</div>
+<p>Tim Hnat began working in mobile health (mHealth) and IoT space in 2008, publishing multiple papers in ACM SenSys. He works as an assistant professor of Computer Science from 2012 when he initiated a kinematic sensing project (K-Sense) that utilized motion tracking bands to target obesity and diabetes. This work led to his selection as an mHealth scholar as part of the prestigious, annual NIH mHealth Summer Institute in 2013 and returned in 2019 as a faculty instructor. Based on this experience, Tim was recruited in 2014 to become the chief software architect for the University of Memphis-based NIH Center of Excellence on Mobile Sensor Data-to-Knowledge (MD2K). In this role, Tim oversees the development of both mCerebrum and Cerebral Cortex and their deployment across 11 states in the US for high-frequency sensor data collection in research studies. He also supports the usage of these data for computational modeling by computing researchers and population-scale analysis by health researchers. He supervises a team of four software engineers, three with doctoral degrees.</p>
+</div>
+<div class="section" id="nasir-ali">
+<h3>Nasir Ali<a class="headerlink" href="#nasir-ali" title="Permalink to this headline">¶</a></h3>
+<a class="reference internal image-reference" href="../_images/ali_headshot.png"><img alt="../_images/ali_headshot.png" src="../_images/ali_headshot.png" style="width: 200px; height: 200px;" /></a>
+<div class="admonition-about admonition">
+<p class="admonition-title">About</p>
+<p>Research Assistant Professor</p>
+<p>Department of Computer Science, University of Memphis</p>
+</div>
+<p>Nasir Ali has a diverse research background from software engineering to mobile health (mHealth) and IoT space since 2009. His work has been published in top journals (Transactions in Software Engineering and Empirical Software Engineering). In 2016, he joined MD2K to conduct research and develop cloud-based solutions (i.e. Cerebral Cortex), standardization of mHealth sensor metadata, data analysis/modeling pipelines, and visualization layers to support high-frequency mobile sensor big data management, analysis, and producing actionable results. Nasir is the core developer of Cerebral Cortex.</p>
+</div>
+<div class="section" id="anandatirtha-nandugudi">
+<h3>Anandatirtha Nandugudi<a class="headerlink" href="#anandatirtha-nandugudi" title="Permalink to this headline">¶</a></h3>
+<a class="reference internal image-reference" href="../_images/anand.jpg"><img alt="../_images/anand.jpg" src="../_images/anand.jpg" style="width: 200px; height: 200px;" /></a>
+<div class="admonition-about admonition">
+<p class="admonition-title">About</p>
+<p>Data Science Software Engineer</p>
+<p>Department of Computer Science, University of Memphis</p>
+</div>
+<p>Anandatirtha Nandugudi designs, develops, and validates mobile health (mHealth) biomarkers along with a team of graduate students at the MD2K Center of Excellence. He has a rich research background in the areas of mobile computing, networking and sensor networks, and has published several recognised works in these areas in proceedings such as UbiComp. In addition to leading the implementation of newly developed mHealth biomarkers in Cerebral Cortex and mCerebrum, he is volunteering his services to standardise health metadata as part of the IEEE P1752 working group to enable interoperability and wider adoption of mHealth biomarkers.</p>
+</div>
+<div class="section" id="shahin-samiei">
+<h3>Shahin Samiei<a class="headerlink" href="#shahin-samiei" title="Permalink to this headline">¶</a></h3>
+<a class="reference internal image-reference" href="../_images/Shahin_Samiei.png"><img alt="../_images/Shahin_Samiei.png" src="../_images/Shahin_Samiei.png" style="width: 200px; height: 200px;" /></a>
+<div class="admonition-about admonition">
+<p class="admonition-title">About</p>
+<p>Associate Director, Research &amp; Studies</p>
+<p>MD2K Center of Excellence, University of Memphis</p>
+</div>
+<p>Shahin Samiei serves as the MD2K Center’s Associate Director of Research &amp; Studies. He oversees the MD2K Center’s human subjects research, institutional review board (IRB) protocol writing and management, research compliance, informed consent processes and procedures, and data sharing, for all 15 research studies using MD2K software and sensors. In doing so, he directs formal data-sharing agreements, ensures maintenance with procedures outlined in study protocols and consent processes, and manages access control to study data repositories, across all participating personnel at each collaborating site. He also directs research logistics (e.g., inventory management) for the MD2K Center’s research tools, such as sensor platforms and related data collection equipment. Shahin’s background is in public health, having received his MPH from the University of Memphis.</p>
+<div class="toctree-wrapper compound">
+</div>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./tutorials"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        </div>
+    </div>
+    
+    
+    <div class='prev-next-bottom'>
+        
+    <a class='left-prev' id="prev-link" href="../software/mcerebrum/index.html" title="previous page">mCerebrum</a>
+    <a class='right-next' id="next-link" href="principled_approach_computational_modeling/introduction.html" title="next page">Introduction</a>
+
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By MD2K Center of Excellence<br/>
+        
+            &copy; Copyright 2020.<br/>
+          <div class="extra_footer">
+            MD2K is supported by the National Institutes of Health Big Data to Knowledge Initiative (Grant #1U54EB020404)<br>Team: Cornell Tech, GA Tech, Harvard, U. Memphis, Northwestern, Ohio State, UCLA, UCSD, UCSF, UMass, U. Michigan, U. Utah, WVU 
+          </div>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+
+    <script src="../_static/js/index.js"></script>
+    
+  </body>
+</html>
