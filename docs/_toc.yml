@@ -5,6 +5,7 @@
   - file: software/mcerebrum/index
     # sections:
     #   - file: mCerebrum/index
+  - file: notebooks
 
 - part: Tutorials
   chapters:
