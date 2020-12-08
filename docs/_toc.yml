@@ -38,6 +38,7 @@
         - file: software/mprov/pennprov
     - file: software/mresearch/index
       sections:
+        - file: software/mresearch/motionsense/index
         - file: software/mresearch/mflow/index
         - file: software/mresearch/mpolicy_privlib/index
         - file: software/mresearch/physiogan/index
